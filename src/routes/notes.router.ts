@@ -1,5 +1,5 @@
 import {Router} from "express";
-import {create, fetchAll, fetchOneById, fetchStats, remove, update} from "../repositories/note.repository";
+import {create, fetchAll, fetchOneById, fetchStats, remove, update} from "../repositories/notes.repository";
 
 const router = Router();
 
