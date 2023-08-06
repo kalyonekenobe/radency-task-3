@@ -19,6 +19,8 @@ class NotesHandler {
             createdAt: Date.now(),
         };
     }
+    // Automatically recalculates some fields of class Note (Example: 'dates' field is recalculated based on
+    // 'content' field)
     static normalize(note) {
         var _a;
         return Object.assign(Object.assign({}, note), { dates: (_a = note.content.match(regular_expressions_1.DATE_REGEX)) !== null && _a !== void 0 ? _a : [] });

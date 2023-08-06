@@ -9,6 +9,7 @@ const notes_router_1 = __importDefault(require("./routes/notes.router"));
 dotenv_1.default.config();
 const app = (0, express_1.default)();
 const port = process.env.PORT;
+app.use(express_1.default.json());
 app.use(notes_router_1.default);
 app.listen(port, () => {
     console.log(`Server is running at port: ${port}`);

@@ -18,6 +18,8 @@ export class NotesHandler {
     };
   }
 
+  // Automatically recalculates some fields of class Note (Example: 'dates' field is recalculated based on
+  // 'content' field)
   static normalize(note: Note): Note {
 
     return {
