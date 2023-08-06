@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const note_repository_1 = require("../repositories/note.repository");
+const router = (0, express_1.Router)();
+router.post('/notes', note_repository_1.create);
+router.delete('/notes/:id', note_repository_1.remove);
+router.patch('/notes/:id', note_repository_1.update);
+router.get('/notes/:id', note_repository_1.fetchOneById);
+router.get('/notes', note_repository_1.fetchAll);
+router.get('/notes/stats', note_repository_1.fetchStats);
+exports.default = router;
