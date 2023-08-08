@@ -14,3 +14,20 @@ app.use(notesRouter);
 app.listen(port, () => {
   console.log(`Server is running at port: ${port}`);
 });
+
+/*
+version: "3.8"
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_USER: admin
+      POSTGRES_DB: notes-app
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+  web:
+    image:
+ */
