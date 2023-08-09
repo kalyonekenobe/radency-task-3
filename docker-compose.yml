@@ -5,7 +5,8 @@ services:
     ports:
       - '8000:8000'
   database:
-    image: 'postgres'
+    build:
+      dockerfile: Dockerfile_DB
     ports:
       - '4321:5432'
     environment:
