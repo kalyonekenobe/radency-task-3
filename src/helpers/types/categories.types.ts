@@ -1,1 +1,4 @@
-export type Category = 'Task' | 'Random Thought' | 'Idea' | 'Quote';
+export type Category = {
+  id: string,
+  name: string
+};

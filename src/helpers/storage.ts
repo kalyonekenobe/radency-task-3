@@ -1,6 +1,7 @@
 import {Note} from "./types/notes.types";
 import {NotesHandler} from "./notes-handler";
 import {Category} from "./types/categories.types";
+import crypto from "crypto";
 
 type Storage = {
   notes: Note[],
@@ -8,7 +9,12 @@ type Storage = {
 };
 
 export const storage: Storage = {
-  categories: [ 'Task', 'Random Thought', 'Idea', 'Quote' ],
+  categories: [
+    { id: crypto.randomUUID(), name: 'Task' },
+    { id: crypto.randomUUID(), name: 'Random Thought' },
+    { id: crypto.randomUUID(), name: 'Idea' },
+    { id: crypto.randomUUID(), name: 'Quote' }
+  ],
   notes: [
     NotesHandler.create('Shopping list', 'Tomatoes, bread', 'Task'),
     NotesHandler.create('The theory of evolution', 'The evolution is the change in heritable characteristics of biological populations over successive generations.', 'Random Thought'),

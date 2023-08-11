@@ -4,7 +4,7 @@ export type Note = {
   id: string,
   name: string,
   content: string,
-  category: Category,
+  categoryId: string,
   dates: string[],
   isArchived: boolean,
   createdAt: number,
