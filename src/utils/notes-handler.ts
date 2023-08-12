@@ -1,7 +1,7 @@
-import {Note} from "./types/notes.types";
 import {DATE_REGEX} from "./regular-expressions";
-import {Category} from "./types/categories.types";
-import crypto from "crypto";
+import * as crypto from "crypto";
+import {Category} from "../types/categories.types";
+import {Note} from "../types/notes.types";
 
 export class NotesHandler {
 

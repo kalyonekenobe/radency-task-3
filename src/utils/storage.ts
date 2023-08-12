@@ -1,6 +1,6 @@
-import {Note} from "./types/notes.types";
+import {Note} from "../types/notes.types";
 import {NotesHandler} from "./notes-handler";
-import {Category} from "./types/categories.types";
+import {Category} from "../types/categories.types";
 
 type Storage = {
   notes: Note[],
